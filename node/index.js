@@ -26,6 +26,9 @@ connection.query(sql);
 
 const getRegisters = `SELECT name FROM people`;
 connection.query(getRegisters, (err, rows, fields) => {
+    if(err){
+        console.log(err);
+    }
   this.rows = rows;
 });
 
