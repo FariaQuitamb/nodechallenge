@@ -15,8 +15,11 @@ const mysql = require("mysql");
 const connection = mysql.createConnection(config);
 
 const tableCreated =
-  "CREATE TABLE IF NOT EXISTS people (id int not null auto_increment primary key, name varchar(40) not null)";
-connection.query(tableCreated);
+  "create table people (id int not null auto_increment primary key, name varchar(40) not null)";
+connection.query(tableCreated, (err, result)=>{
+    if(err)
+        console.log(err);
+});
 
 const sql = `INSERT INTO people(name) values('Faria Quitamba')`;
 connection.query(sql);
