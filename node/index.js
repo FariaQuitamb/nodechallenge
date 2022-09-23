@@ -14,11 +14,11 @@ const config = {
 const mysql = require("mysql");
 const connection = mysql.createConnection(config);
 
-const getTable = "DROP TABLE IF EXISTS people";
-connection.query(getTable, (err, result) => {
-  console.log("Table droped");
-  console.log(result);
-});
+// const getTable = "DROP TABLE IF EXISTS people";
+// connection.query(getTable, (err, result) => {
+//   console.log("Table droped");
+//   console.log(result);
+// });
 
 const tableCreated =
   "create table people (id int not null auto_increment primary key, name varchar(40) not null)";
