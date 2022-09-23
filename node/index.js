@@ -14,7 +14,7 @@ const config = {
 const mysql = require('mysql')
 const connection = mysql.createConnection(config)
 
-const getTable = 'DROP TABLE IF EXISTS people';
+const getTable = 'DROP TABLE IF EXISTS "people"';
 connection.query(getTable);
 
 const table = "create table people (id int not null auto_increment primary key, name varchar(40) not null)";
