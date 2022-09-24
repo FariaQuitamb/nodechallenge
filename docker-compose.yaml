@@ -12,6 +12,7 @@ services:
 
   database: 
     image: mysql:5.7
+    container_name: nodejs-database-1
     command: --innodb-use-native-aio
     restart: always
     tty: true
