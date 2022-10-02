@@ -9,6 +9,8 @@ services:
       - challengeNetwork
     ports:
       - "8080:80"
+    depends_on:
+      - app
 
   database: 
     image: mysql:5.7
